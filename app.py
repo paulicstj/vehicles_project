@@ -28,6 +28,6 @@ condition_df= condition.reset_index()
 condition_graph= st.checkbox('Creación de un gráfico de barras.')
 if condition_graph:
     st.write('Creación de un gráfico que muestra la condición del vehículo vs el precio de venta.')
-    
-    fig_bar= px.bar(condition_df, x:'condition', y:'price')
+
+    fig_bar= px.bar(condition_df, x='condition', y='price')
     st.plotly_chart(fig_bar, use_container_width= True)
