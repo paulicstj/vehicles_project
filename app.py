@@ -19,7 +19,7 @@ scat_button= st.button('Construir gráfico de dispersión')
 if scat_button:
     st.write('Creación de un gráfico de dispersión para el conjunto de anuncios de venta de coches')
 
-    fig_scat= px.scatter(car_data, x="odometer")
+    fig_scat= px.scatter(car_data, x="odometer", y= "price")
     st.plotly_chart (fig_scat, use_container_width= True)
 
 condition= car_data.groupby('condition')['price'].mean()
